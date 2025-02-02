@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+
+
+.trf{
+    height:100%
+}
+
+.imageRep{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    user-select:none;
+    pointer-events: none; 
+    -webkit-user-drag: none;
+}
+.nodrag {
+    width: 180px; /* Fixed width */
+    height: 180px; /* Fixed height */
+    object-fit: contain; /* Ensures images fill the box without stretching */
+    border-radius: 8px; /* Optional rounded corners */
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+@media (max-width: 640px) { 
+    .product {
+        width: 150px; /* Smaller screens */
+        height: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hide400 {
+      display: none;
+    }
+  }
+  
+  /* Hide scrollbar for Chrome, Safari, Edge */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
