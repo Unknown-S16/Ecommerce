@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+
+
+.trf{
+    height:100%
+}
+
+.imageRep{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    user-select:none;
+    pointer-events: none; 
+    -webkit-user-drag: none;
+}
