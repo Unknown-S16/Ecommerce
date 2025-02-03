@@ -1,12 +1,16 @@
+import { useNavigate } from "react-router-dom";
+import Main from "../main/Main"
 
 export default function Section({mode}) {
  
-  
+  const navigate = useNavigate();
+
 
   return (
+    <>
     <div className={`flex mx-auto p-6  sm:gap-4 justify-center items-stretch ${mode?"bg-gray-700":null}`}>
       {/* Grocery Section */}
-      <section className="group bg-green-200 p-6 rounded-lg shadow-sm md:flex select-none cursor-pointer w-1/2 hover:shadow-md transition-all  shadow-gray-500 ">
+      <section onClick={() => navigate("/grocery")} className="group bg-green-200 p-6 rounded-lg shadow-sm md:flex select-none cursor-pointer w-1/2 hover:shadow-md transition-all  shadow-gray-500 ">
         <div className="flex flex-col items-center justify-center ">
           <h2 className="text-3xl font-bold text-green-700 mb-4">Groceries</h2>
           <p className="hidden md:inline text-gray-700 text-center lg:text-xl">
@@ -36,5 +40,7 @@ export default function Section({mode}) {
         <img className=" imageRep" src="/electronic.png" alt="electronic" />
       </section>
     </div>
+    <Main mode={mode}/>
+    </>
   );
 }

@@ -9,7 +9,7 @@ const Groceries = [
     },
     {
       id: 2,
-      name: "Fresh Farm Eggs 12 Pack",
+      name: "Farm Eggs 12 Pack",
       price: 4.99,
       stock: 40,
       rating: 4.7,
@@ -33,7 +33,7 @@ const Groceries = [
     },
     {
       id: 5,
-      name: "Fresh Chicken (1kg)",
+      name: "Fresh Chicken 1kg",
       price: 9.99,
       stock: 15,
       rating: 4.7,
@@ -41,7 +41,7 @@ const Groceries = [
     },
     {
       id: 6,
-      name: "Onion (1kg)",
+      name: "Onion 1kg",
       price: 2.99,
       stock: 50,
       rating: 4.6,
@@ -49,7 +49,7 @@ const Groceries = [
     },
     {
       id: 7,
-      name: "Fresh Spinach (200g)",
+      name: "Fresh Spinach 200g",
       price: 1.99,
       stock: 30,
       rating: 4.5,
@@ -57,7 +57,7 @@ const Groceries = [
     },
     {
       id: 8,
-      name: "Tomatoes (1kg)",
+      name: "Tomatoes 1kg",
       price: 3.49,
       stock: 40,
       rating: 4.7,
@@ -65,7 +65,7 @@ const Groceries = [
     },
     {
       id: 9,
-      name: "Peanut Butter (500g)",
+      name: "Peanut Butter 500g",
       price: 4.99,
       stock: 22,
       rating: 4.6,
@@ -73,7 +73,7 @@ const Groceries = [
     },
     {
       id: 10,
-      name: "Olive Oil (1L)",
+      name: "Olive Oil 1L",
       price: 7.99,
       stock: 20,
       rating: 4.7,
@@ -81,7 +81,7 @@ const Groceries = [
     },
     {
       id: 11,
-      name: "Whole Almonds (250g)",
+      name: "Almonds 250g",
       price: 6.49,
       stock: 25,
       rating: 4.6,

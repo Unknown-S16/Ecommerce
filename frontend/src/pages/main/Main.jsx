@@ -2,10 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import Groceries from "../sections/G-data";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-export default function Main() {
+export default function Main({mode}) {
   const scrollRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
   let isDragging = false, startX, scrollLeft;
+
+   
 
   // Auto-scroll every 3 seconds
   useEffect(() => {
@@ -58,21 +60,21 @@ export default function Main() {
          onMouseLeave={() => setIsHovered(false)}
     >
       {/* Section Title */}
-      <div className="px-6 py-2 bg-red-400 border border-red-600 w-full">
-        <h1 className="text-white text-xl font-bold">What's Special</h1>
+      <div className={`px-6 py-2   w-full ${mode? "bg-gray-400":"bg-red-400"}`}>
+        <h1 className="text-white text-xl font-bold ">What's Special</h1>
       </div>
 
       {/* Scrollable Container */}
       <div
         ref={scrollRef}
-        className="flex overflow-x-auto scroll-smooth whitespace-nowrap gap-4 p-4 no-scrollbar cursor-grab active:cursor-grabbing"
+        className={`flex overflow-x-auto scroll-smooth whitespace-nowrap gap-4 p-4 no-scrollbar cursor-grab active:cursor-grabbing ${mode?"bg-gray-700":"bg-white"}`}
         onMouseDown={startDragging}
         onMouseLeave={stopDragging}
         onMouseUp={stopDragging}
         onMouseMove={dragScroll}
       >
         {Groceries.map((item) => (
-          <div key={item.id} className="min-w-[200px] bg-white p-4 shadow-md rounded-lg select-none">
+          <div key={item.id} className={`min-w-[200px] p-4 shadow-md rounded-lg select-none border-1 border-gray-300 bg-white`}>
             <img src={item.image} alt={item.name} className="nodrag rounded-3xl bg-white p-2 " />
             <h2 className="text-lg font-semibold mt-2">{item.name}</h2>
             <p className="text-gray-600">${item.price.toFixed(2)}</p>
